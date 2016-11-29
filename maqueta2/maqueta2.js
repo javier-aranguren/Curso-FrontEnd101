@@ -28,12 +28,13 @@ function crearTaquilla(numero,tipo){
   var taquilla = document.createElement('div');
   taquilla.setAttribute('taquilla','');
   taquilla.setAttribute('tarjeta','');
-  taquilla.id = numero;
   var inferior ="";
   if(tipo !== 'atencion'){
+    taquilla.id = "taq"+numero;
     inferior ="<button buton-taq-sig type='button'>SIGUEINTE</button>";
   }else{
-    inferior = "<div disponible>Disponible</div>";
+    taquilla.id = "atn"+numero;
+    inferior = "<div class='disponible' atendiendo>Disponible</div>";
   }
   taquilla.innerHTML='<div titulo-taquilla>'+numero+'</div>'+inferior;
   return taquilla;
@@ -44,7 +45,18 @@ function load(){
     registro();
   };
   taquillas.forEach(function(taquilla){
-    document.querySelector('div[taquillas]').appendChild(crearTaquilla(taquilla,"UI"));
+    var UI = crearTaquilla(taquilla,"UI");
+    UI.querySelector('button[buton-taq-sig]').onclick= function(){
+      var atencion = document.getElementById('atn'+taquilla).querySelector('div[atendiendo]');
+      if(cola.length){
+        var elementoSaliente = cola.shift();
+        elementoSaliente.parentNode.removeChild(elementoSaliente);
+        atencion.classList.add('cliente');
+        atencion.classList.remove('disponible');
+        atencion.textContent = elementoSaliente.textContent;
+      }
+    };
+    document.querySelector('div[taquillas]').appendChild(UI);
     document.querySelector('div[atencion]').appendChild(crearTaquilla(taquilla,"atencion"));
   });
 }
