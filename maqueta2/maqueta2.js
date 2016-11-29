@@ -1,4 +1,5 @@
 var cola = [];
+var taquillas = [1,2];
 load();
 var registro = function(){
   var nombre = document.querySelector('input[name="nombre"]');
@@ -31,6 +32,8 @@ function crearTaquilla(numero,tipo){
   var inferior ="";
   if(tipo !== 'atencion'){
     inferior ="<button buton-taq-sig type='button'>SIGUEINTE</button>";
+  }else{
+    inferior = "<div disponible>Disponible</div>";
   }
   taquilla.innerHTML='<div titulo-taquilla>'+numero+'</div>'+inferior;
   return taquilla;
@@ -40,8 +43,8 @@ function load(){
   document.querySelector('div[boton-form]').onclick= function(){
     registro();
   };
-  var taquillas = [crearTaquilla(1,"UI"),crearTaquilla(2,"UI"),crearTaquilla(3,"UI")];
   taquillas.forEach(function(taquilla){
-    document.querySelector('div[taquillas]').appendChild(taquilla);
+    document.querySelector('div[taquillas]').appendChild(crearTaquilla(taquilla,"UI"));
+    document.querySelector('div[atencion]').appendChild(crearTaquilla(taquilla,"atencion"));
   });
 }
