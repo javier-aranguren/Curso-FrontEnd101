@@ -1,0 +1,101 @@
+div[contenedor]{
+	width: 100%;
+	height: 100%;
+}
+div[superior-izq],
+div[superior-der],
+div[inferior-izq],
+div[inferior-der]{
+	float:left;
+	width: calc((494px / 2) - 2px);
+	height: calc((550px / 2) - 2px);
+}
+div[superior-izq]{
+	border:1px solid blue;
+}
+div[inferior-izq]{
+	border:1px solid grey;
+}
+div[superior-der]{
+	border:1px solid orange;
+}
+div[inferior-der]{
+	border:1px solid firebrick;
+}
+div[campo-texto]{
+	padding: 20px;
+}
+input[type='text']{
+	padding:5px; 
+}
+button{
+	border: none;
+	color: white;
+	padding: 10px;
+	margin-left: 3px;
+	margin-top: 3px;
+	border-radius:5px;
+}
+button[btnAgregar]{
+	background-color: #4CAF50;
+	margin-left:55px; 
+}
+
+button[btnSacar]{
+	background-color: #f44336;
+}
+button[btnMostrar]{
+	background-color: #9C27B0;
+	margin-left: 40px;
+}
+
+button[btnMostrarp]{
+	background-color:red;
+
+}
+button[btnMostraru]{
+	background-color:black;
+}
+button[btnBuscar]{
+	background-color:#009688;
+} 
+
+h1[titulo]{
+	text-align: center;
+	width: 100%;
+	margin: 0px;
+	height: 40px;
+	font-size:20px;
+	background: #607D8B;
+	color:white;
+}
+h1[titulo2]{
+	text-align: center;
+	width: 100%;
+	margin: 0px;
+	height: 40px;
+	font-size:20px;
+	background: #29B6F6;
+	color:white;
+}
+div[cont-texto]{
+	width: calc(100% - 80px);
+	height: calc(100% - 120px);
+	font-size:20px;
+	padding: 40px;
+}
+div[cont-cola]{
+
+}
+/****************************************************/
+div[elemento]{
+	padding: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    width: 20px;
+    text-align: center;
+    float: left;
+    margin: 2px;
+
+}
+
+}
