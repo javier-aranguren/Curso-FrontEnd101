@@ -1,2 +1,2 @@
 # Curso-FrontEnd101
-Curso de front en dado por Victor Leon
+Curso de FrontEnd (html/css/js) dado por Victor Leon
