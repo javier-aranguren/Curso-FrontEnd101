@@ -34,6 +34,7 @@ for(var x=0;x<vocales.length;x++){
 	console.log(vocales[x]);
 }
 
+//funcion forEach permite recorrer un arreglo
 vocales.forEach(function(vocal){
 	console.log(vocal);
 });
@@ -43,12 +44,12 @@ numeros.forEach(function(variable){
 	console.log(variable)
 });
 
+//funcion concat sirve para unir 2 arreglos
 var todos = vocales.concat(numeros);
-
 console.log(todos);
 
-
+//funcion revert invierte el arreglo
+numeros.revert();
 numeros.forEach(function(invertido){
-
 	console.log(invertido);
 });

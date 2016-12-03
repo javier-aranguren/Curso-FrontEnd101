@@ -3,9 +3,7 @@ var pila = [];
 var cola = [];
 
 
-function load(){
-	//displays
-	
+function load(){	
 	//botones
 		//cola
 		document.querySelector('button[agregarCola]').onclick = function(){
